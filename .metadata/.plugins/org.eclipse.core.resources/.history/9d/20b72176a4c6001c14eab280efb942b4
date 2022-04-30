@@ -1,0 +1,28 @@
+package com.simplilearn.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Subject")
+
+public class Subject 
+{
+	@Id
+	@GeneratedValue
+	@Column(name="Subject1_Physics")
+	private String Subject1_Physics;
+	@Column(name="Subject2_Maths")
+	private String Subject2_Maths;
+	@Column(name="Subject3_Chemistry")
+	private String Subject3_Chemistry;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="Teacher_id")
+	
+	
+}
